@@ -15,30 +15,28 @@ import com.pluralsight.model.Goal;
 @Controller
 @SessionAttributes("goal")
 public class GoalController {
-	
+
 	@RequestMapping(value = "addGoal", method = RequestMethod.GET)
-	 public String addGoal(Model model) {
+	public String addGoal(Model model) {
 		Goal goal = new Goal();
 		goal.setMinutes(10);
+		model.addAttribute("goal", goal);
 		
-		 model.addAttribute("goal", goal);
-		 
-		 return "addGoal";
-	 }
+		return "addGoal";
+	}
 	
 	@RequestMapping(value = "addGoal", method = RequestMethod.POST)
-	public String addGoal(@Valid @ModelAttribute("goal") Goal goal, BindingResult result) {
+	public String updateGoal(@Valid @ModelAttribute("goal") Goal goal, BindingResult result) {
 		
 		System.out.println("result has errors: " + result.hasErrors());
 		
-		System.out.println("Minutes updated: " + goal.getMinutes());
+		System.out.println("Goal set: " + goal.getMinutes());
 		
-		if (result.hasErrors()) {
+		if(result.hasErrors()) {
 			return "addGoal";
 		}
 		
-		return "redirect:addMinutes.html";
-		
+		return "redirect:index.jsp";
 	}
-
+	
 }

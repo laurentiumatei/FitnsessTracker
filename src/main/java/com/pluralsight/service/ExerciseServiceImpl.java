@@ -7,10 +7,10 @@ import org.springframework.stereotype.Service;
 
 import com.pluralsight.model.Activity;
 
+
 @Service("exerciseService")
-public class ExcerciseServiceImpl implements ExerciseService {
-	
-	@Override
+public class ExerciseServiceImpl implements ExerciseService {
+
 	public List<Activity> findAllActivities() {
 		
 		List<Activity> activities = new ArrayList<Activity>();
@@ -29,5 +29,5 @@ public class ExcerciseServiceImpl implements ExerciseService {
 		
 		return activities;
 	}
-
+	
 }
