@@ -29,7 +29,9 @@ dependencies {
     	'org.springframework:spring-oxm:4.0.3.RELEASE',
     	'org.springframework.security:spring-security-web:4.0.3.RELEASE',
     	'org.springframework.security:spring-security-config:4.0.3.RELEASE',
-    	'commons-logging:commons-logging:1.1.1'
+    	'commons-logging:commons-logging:1.1.1',
+    	'mysql:mysql-connector-java:5.1.21',
+    	'org.springframework:spring-jdbc:4.0.3.RELEASE'
     )
     
     providedCompile(
