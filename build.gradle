@@ -26,8 +26,10 @@ dependencies {
     	'org.hibernate:hibernate-validator:4.2.0.Final',
     	'org.codehaus.jackson:jackson-mapper-asl:1.4.1',
     	'com.thoughtworks.xstream:xstream:1.4.9',
-    	'org.springframework:spring-oxm:4.0.3.RELEASE'
-    	
+    	'org.springframework:spring-oxm:4.0.3.RELEASE',
+    	'org.springframework.security:spring-security-web:4.0.3.RELEASE',
+    	'org.springframework.security:spring-security-config:4.0.3.RELEASE',
+    	'commons-logging:commons-logging:1.1.1'
     )
     
     providedCompile(
